@@ -13,6 +13,7 @@ This project is an automation testing framework developed using Java, Selenium, 
 
 # Project Structure
 
+```
 ├── src
 │   ├── main
 │   │   ├── java
@@ -28,7 +29,7 @@ This project is an automation testing framework developed using Java, Selenium, 
 │           ├── testdata         // Test data files (Excel)
 ├── pom.xml                      // Maven POM file for managing dependencies
 └── README.md                    // Project documentation
-
+```
 
 
 # Key Features
