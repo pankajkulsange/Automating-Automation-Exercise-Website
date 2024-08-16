@@ -33,6 +33,7 @@ public class LoginStepDef {
 
 	@Then("User should navigate to homepage")
 	public void user_should_navigate_to_homepage() {
+		Assert.assertEquals(driver.getCurrentUrl().toString(), "https://www.automationexercise.com/");
 	    driver.findElement(By.xpath("//h2[contains(text(), 'Category')]")).isDisplayed();
 	}
 
