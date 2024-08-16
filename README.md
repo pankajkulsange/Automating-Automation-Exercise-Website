@@ -12,6 +12,7 @@ This project is an automation testing framework developed using Java, Selenium, 
 - Apache POI: A library for reading and writing Microsoft Office files, used for handling test data in Excel files.
 
 # Project Structure
+
 ├── src
 │   ├── main
 │   │   ├── java
