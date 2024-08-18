@@ -25,6 +25,12 @@ public class LoginStepDef {
 	    driver.findElement(By.xpath("(//input[@type='email' and @name='email'])[1]")).sendKeys(uName);
 	    driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(pass);
 	}
+	
+	@When("User enters invalid {string} and {string}")
+	public void user_enters_invalid_and(String uName, String pass) {
+		driver.findElement(By.xpath("(//input[@type='email' and @name='email'])[1]")).sendKeys(uName);
+	    driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(pass);
+	}
 
 	@When("Clicks on Login button")
 	public void clicks_on_login_button() {
@@ -35,6 +41,14 @@ public class LoginStepDef {
 	public void user_should_navigate_to_homepage() {
 		Assert.assertEquals(driver.getCurrentUrl().toString(), "https://www.automationexercise.com/");
 	    driver.findElement(By.xpath("//h2[contains(text(), 'Category')]")).isDisplayed();
+	}
+	
+	@Then("Error message displayed correctly")
+	public void error_message_displayed_correctly() {
+		Assert.assertEquals(
+				driver.findElement(
+						By.xpath("//p[contains(text(), 'Your email or password is incorrect!')]")).isDisplayed(), 
+				true);
 	}
 
 	@Then("Close the browser")
