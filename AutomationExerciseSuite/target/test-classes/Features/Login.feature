@@ -1,5 +1,6 @@
 Feature: Login page automation of automation exercise
 
+
 Scenario Outline: Check login in successful with valid credintials
 
 Given User is on login page
