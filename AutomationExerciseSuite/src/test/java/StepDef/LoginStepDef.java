@@ -48,6 +48,11 @@ public class LoginStepDef {
 	    driver.findElement(By.xpath("//h2[contains(text(), 'Category')]")).isDisplayed();
 	}
 	
+	@Then("User is logged in")
+	public void user_is_logged_in() {
+//	    Assert.assertEquals(driver., null);
+	}
+	
 	@Then("Error message displayed correctly")
 	public void error_message_displayed_correctly() {
 		Assert.assertEquals(
