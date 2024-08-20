@@ -7,7 +7,8 @@ Given User is on login page
 When User enters valid "<username>" and "<password>"
 And Clicks on Login button
 Then User should navigate to homepage
-And Close the browser
+And User is logged in
+Then Close the browser
 
 Examples:
 |	username	| password	|
@@ -19,7 +20,7 @@ Given User is on login page
 When User enters invalid "<username>" and "<password>"
 And Clicks on Login button
 Then Error message displayed correctly
-And Close the browser
+Then Close the browser
 
 Examples:
 |	username	| password	|
